@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b1816795d2838f643acc6f6f815cfff9
+AssetOrigin:
+  serializedVersion: 1
+  productId: 273928
+  packageName: Hierarchy Designer
+  packageVersion: 3.2.2
+  assetPath: Assets/Hierarchy Designer/Runtime/Scripts/HierarchyDesignerFolder.cs
+  uploadId: 936790
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

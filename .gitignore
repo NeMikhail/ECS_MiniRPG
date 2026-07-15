@@ -173,3 +173,9 @@ x86/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+Assets/_Project/Docs/**
+
+# --- Unity MCP Server ---
+Tools/UnityMcpServer/node_modules/
+Tools/UnityMcpServer/*.log

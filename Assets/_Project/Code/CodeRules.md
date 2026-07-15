@@ -1,0 +1,24 @@
+- Do not comment code. Use only summary if nessesary.
+- In strings and summaries, use only English.
+- Don't create .md documentation files without a request.
+- Don't use spaces for alignment.
+- Ask questions if you need clarification.
+- Avoid magic numbers and strings. Extract everything required into readonly fields.
+- Avoid deep nesting. Use method separation to improve readability.
+- Do not implement functionality without a direct request. Avoid adding unnecessary elements.
+- Strive to cache Unity components when necessary. Avoid repeated GetComponent calls.
+- Do not use the "?" operator for GameObject and Component.
+- Minimize null checks for GameObject and Component.
+- Do not add unnecessary checks.
+- Subscription/unsubscription to events should be in OnEnable/OnDisable methods.
+
+- It is undesirable to use break, return, and continue.
+- Field names always start with the prefix "_"
+- Method and property names always start with a capital letter in PascalCase
+- Bool names always begin with is/can/has/should
+- Opening curly braces "{" must always be placed on a new line.
+- Enum values must always be explicitly indexed.
+- Every enum must start with None = 0.
+- Do not try compile project to check code
+- Do not generate .meta files
+- Stick to your current data-driven architecture

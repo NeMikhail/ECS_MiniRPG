@@ -44,3 +44,115 @@
     margin-top: 8px;
     margin-bottom: 8px;
 }
+
+.inventory-overlay {
+    background-color: rgba(0, 0, 0, 0.38);
+}
+
+.inventory-panel {
+    width: 820px;
+    min-height: 560px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+    padding-bottom: 24px;
+    background-color: rgba(24, 24, 24, 0.92);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.inventory-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.inventory-title {
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    -unity-font-style: bold;
+}
+
+.inventory-close-button {
+    width: 36px;
+    height: 36px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(80, 80, 80, 0.8);
+}
+
+.inventory-content {
+    flex-direction: row;
+}
+
+.equipment-slots {
+    width: 180px;
+    flex-direction: row;
+    margin-right: 24px;
+}
+
+.equipment-column {
+    width: 82px;
+    margin-right: 8px;
+}
+
+.inventory-grid {
+    width: 560px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.inventory-slot,
+.equipment-slot {
+    width: 64px;
+    height: 64px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: rgba(14, 14, 14, 0.82);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(78, 78, 78);
+    border-right-color: rgb(78, 78, 78);
+    border-top-color: rgb(78, 78, 78);
+    border-bottom-color: rgb(78, 78, 78);
+}
+
+.inventory-slot:hover,
+.equipment-slot:hover {
+    background-color: rgba(42, 42, 42, 0.92);
+}
+
+.inventory-item-icon {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.inventory-item-title {
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    color: rgb(255, 255, 255);
+    font-size: 9px;
+    -unity-text-align: lower-center;
+    white-space: normal;
+}
+
+.inventory-item-count {
+    position: absolute;
+    right: 4px;
+    bottom: 3px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    -unity-font-style: bold;
+}

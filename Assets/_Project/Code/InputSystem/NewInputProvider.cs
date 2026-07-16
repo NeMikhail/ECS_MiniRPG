@@ -22,6 +22,11 @@ namespace ECSMiniRPG.InputSystem
             return _newInput.GUI.WasPausePressedThisFrame();
         }
 
+        public bool WasInventoryPressedThisFrame()
+        {
+            return _newInput.GUI.WasInventoryPressedThisFrame();
+        }
+
         public void SetPlayerInputBlocked(bool isBlocked)
         {
             if (_isPlayerInputBlocked != isBlocked)
@@ -56,3 +61,4 @@ namespace ECSMiniRPG.InputSystem
         }
     }
 }
+

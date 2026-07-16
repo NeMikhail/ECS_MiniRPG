@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GameConfigs
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.GameConfigs
   _playerConfig: {fileID: 11400000, guid: d5799828aadd0684c9436bebcb3c8566, type: 2}
+  _inventoryConfig: {fileID: 11400000, guid: 8c36d1085387477469eb2b5b7d80cc95, type: 2}
+

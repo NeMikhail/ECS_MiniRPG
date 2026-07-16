@@ -308,8 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
-  flattenFolder: 1
-  moveChildrenToHierarchyRoot: 1
+  flattenFolder: 0
+  moveChildrenToHierarchyRoot: 0
   flattenEvent: 1
   OnFlattenEvent:
     m_PersistentCalls:
@@ -1088,8 +1088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
-  flattenFolder: 1
-  moveChildrenToHierarchyRoot: 1
+  flattenFolder: 0
+  moveChildrenToHierarchyRoot: 0
   flattenEvent: 1
   OnFlattenEvent:
     m_PersistentCalls:
@@ -1218,8 +1218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
-  flattenFolder: 1
-  moveChildrenToHierarchyRoot: 1
+  flattenFolder: 0
+  moveChildrenToHierarchyRoot: 0
   flattenEvent: 1
   OnFlattenEvent:
     m_PersistentCalls:
@@ -1334,8 +1334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
-  flattenFolder: 1
-  moveChildrenToHierarchyRoot: 1
+  flattenFolder: 0
+  moveChildrenToHierarchyRoot: 0
   flattenEvent: 1
   OnFlattenEvent:
     m_PersistentCalls:
@@ -1505,8 +1505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
-  flattenFolder: 1
-  moveChildrenToHierarchyRoot: 1
+  flattenFolder: 0
+  moveChildrenToHierarchyRoot: 0
   flattenEvent: 1
   OnFlattenEvent:
     m_PersistentCalls:
@@ -1791,8 +1791,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
-  flattenFolder: 1
-  moveChildrenToHierarchyRoot: 1
+  flattenFolder: 0
+  moveChildrenToHierarchyRoot: 0
   flattenEvent: 1
   OnFlattenEvent:
     m_PersistentCalls:
@@ -1809,6 +1809,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2734250893894183038, guid: 929823b7ca3387547b1e8553477f722a, type: 3}
+      propertyPath: flattenFolder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734250893894183038, guid: 929823b7ca3387547b1e8553477f722a, type: 3}
+      propertyPath: moveChildrenToHierarchyRoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709638488272251672, guid: 929823b7ca3387547b1e8553477f722a, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5709638488272251672, guid: 929823b7ca3387547b1e8553477f722a, type: 3}
       propertyPath: m_Name
       value: Debug
@@ -1869,6 +1881,14 @@ PrefabInstance:
     - target: {fileID: 894270497227521326, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: m_Name
       value: LOGIC_Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404111839921028883, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
+      propertyPath: _moduleInstallerConfigs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404111839921028883, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
+      propertyPath: _moduleInstallerConfigs.Array.data[5]._moduleType
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: serializationData.Prefab

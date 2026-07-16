@@ -1,6 +1,7 @@
 using System;
 using ECSMiniRPG.ContentManagement;
 using ECSMiniRPG.GameplayModule.Components;
+using ECSMiniRPG.InventoryModule.Components;
 using ECSMiniRPG.GUIModule.Components;
 using ECSMiniRPG.LocationModule;
 using ECSMiniRPG.PlayerModule.Components;
@@ -153,7 +154,10 @@ namespace ECSMiniRPG.PlayerModule.Systems
                 new PlayerContentRef
                 {
                     _instance = instance
-                }
+                },
+                InventoryComponent.Create(),
+                Armor.Create(0f),
+                new InventoryEquipmentStats()
             );
             entity.Set<PlayerTag>();
 
@@ -178,3 +182,4 @@ namespace ECSMiniRPG.PlayerModule.Systems
         }
     }
 }
+

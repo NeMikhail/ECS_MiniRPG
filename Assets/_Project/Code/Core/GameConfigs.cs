@@ -1,3 +1,4 @@
+using ECSMiniRPG.InventoryModule.Configs;
 using ECSMiniRPG.PlayerModule.Configs;
 using FFS.Libraries.StaticEcs;
 using UnityEngine;
@@ -9,7 +10,10 @@ namespace ECSMiniRPG
     {
 
         [SerializeField] private PlayerConfig _playerConfig;
+        [SerializeField] private InventoryConfig _inventoryConfig;
 
         public PlayerConfig PlayerConfig => _playerConfig;
+        public InventoryConfig InventoryConfig => _inventoryConfig;
     }
 }
+

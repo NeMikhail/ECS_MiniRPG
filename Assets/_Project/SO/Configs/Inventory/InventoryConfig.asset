@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35204d3cbbf1004d842899bbf3b86ad, type: 3}
+  m_Name: InventoryConfig
+  m_EditorClassIdentifier: Assembly-CSharp::ShowcaseRPG.Code.PlayerModule.Inventory.InventoryConfig
+  _columns: 8
+  _rows: 4
+  _startItems:
+  - _preset: {fileID: 11400000, guid: 94a610a4151d8c14fad561aadac323bf, type: 2}
+    _count: 128
+  - _preset: {fileID: 11400000, guid: 9a97986c869320b4ea76a6e64f89ac9c, type: 2}
+    _count: 1
+  - _preset: {fileID: 11400000, guid: bfb111f1447f6b143beaab37b9e7f3b8, type: 2}
+    _count: 1
+  - _preset: {fileID: 11400000, guid: c603bd0207147ea4da0f0d6d1ecf1a8e, type: 2}
+    _count: 2
+  - _preset: {fileID: 11400000, guid: 68780cc82e720354aaca4336ef69de2f, type: 2}
+    _count: 1
+  - _preset: {fileID: 11400000, guid: fe1ce9f94bc3aaa4bb380eeaa5dc479a, type: 2}
+    _count: 1
+  - _preset: {fileID: 11400000, guid: 21e6bb23bccf9ae4584ec91956ac0a96, type: 2}
+    _count: 64
+  - _preset: {fileID: 11400000, guid: 5e6c40c17308d8d48885d1c2070810c1, type: 2}
+    _count: 10
+  - _preset: {fileID: 11400000, guid: d20c62722c39f8b4a8a3d843a7e21d23, type: 2}
+    _count: 1

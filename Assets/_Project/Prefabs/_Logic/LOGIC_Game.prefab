@@ -141,6 +141,8 @@ MonoBehaviour:
     _moduleType: 4
   - _isEnabled: 1
     _moduleType: 6
+  - _isEnabled: 1
+    _moduleType: 7
 --- !u!114 &6635643808000808149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,3 +180,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+
+

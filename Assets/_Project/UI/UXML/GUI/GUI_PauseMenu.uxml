@@ -1,5 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_Project/UI/USS/Style_Main.uss?fileID=7433441132597879392&amp;guid=8f42f191a0f955f4ea9465e55ed40617&amp;type=3#Style_Main"/>
+    <Style src="project://database/Assets/_Project/UI/USS/GUI.uss?fileID=7433441132597879392&amp;guid=06eadccb873233442ba9d70177b25e7b&amp;type=3#GUI"/>
     <ui:VisualElement name="gui-root" class="gui-root">
         <ui:VisualElement name="pause-menu" class="gui-overlay">
             <ui:VisualElement name="pause-menu-panel" class="gui-panel">

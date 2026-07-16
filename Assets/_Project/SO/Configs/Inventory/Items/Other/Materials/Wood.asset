@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a22c90ac65697648b63a0235df05e35, type: 3}
+  m_Name: Wood
+  m_EditorClassIdentifier: Assembly-CSharp::ShowcaseRPG.Code.PlayerModule.Inventory.Items.GenericItemPreset
+  _id: material_wood_basic
+  _title: Wood log
+  _icon: {fileID: 21300000, guid: 13a083723874ac448957f6f188dd7cda, type: 3}
+  _maxStack: 32
+  _statModifiers: []

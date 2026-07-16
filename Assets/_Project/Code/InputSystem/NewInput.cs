@@ -9,6 +9,7 @@ namespace ECSMiniRPG.InputSystem
         private static readonly string _guiMapName = "GUI";
         private static readonly string _moveActionName = "Move";
         private static readonly string _pauseActionName = "Pause";
+        private static readonly string _inventoryActionName = "Inventory";
 
         private readonly InputActionAsset _asset;
 
@@ -68,14 +69,23 @@ namespace ECSMiniRPG.InputSystem
             {
                 _map = map;
                 Pause = _map.FindAction(_pauseActionName, true);
+                Inventory = _map.FindAction(_inventoryActionName, true);
             }
 
             public InputAction Pause { get; }
+            public InputAction Inventory { get; }
 
             public bool WasPausePressedThisFrame()
             {
                 return Pause.WasPressedThisFrame();
             }
+
+            public bool WasInventoryPressedThisFrame()
+            {
+                return Inventory.WasPressedThisFrame();
+            }
         }
     }
 }
+
+

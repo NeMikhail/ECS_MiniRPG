@@ -13,6 +13,7 @@ namespace ECSMiniRPG.GUIModule
         [SerializeField] private UIDocument _document;
 
         public bool IsInitialized { get; private set; }
+        public UIDocument Document => _document;
         public VisualElement Panel { get; private set; }
         public Button ResumeButton { get; private set; }
         public Button MainMenuButton { get; private set; }
@@ -41,3 +42,4 @@ namespace ECSMiniRPG.GUIModule
         }
     }
 }
+

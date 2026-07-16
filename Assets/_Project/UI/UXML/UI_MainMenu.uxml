@@ -2,8 +2,9 @@
     <Style src="project://database/Assets/_Project/UI/USS/Style_Main.uss?fileID=7433441132597879392&amp;guid=8f42f191a0f955f4ea9465e55ed40617&amp;type=3#Style_Main"/>
     <Style src="project://database/Assets/_Project/UI/USS/Buttons.uss?fileID=7433441132597879392&amp;guid=150373275748439448bb4ed2289182ae&amp;type=3#Buttons"/>
     <ui:VisualElement name="main-panel" style="flex-grow: 1;">
-        <ui:VisualElement name="title-panel" style="flex-grow: 1; position: absolute; width: 600px; height: 100px; top: 10%; left: 5%; justify-content: center;">
-            <ui:Label text="ECS_MiniRPG" name="title" class="text-font-main" style="font-size: 64px; -unity-font-style: bold; align-self: center;"/>
+        <ui:VisualElement name="bg" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Project/Art/UI/Images/MenuBG1.png?fileID=2800000&amp;guid=47752fc008683a446b62556bcf5f74e9&amp;type=3#MenuBG1&quot;);"/>
+        <ui:VisualElement name="title-panel" style="flex-grow: 1; position: absolute; width: 800px; height: 100px; top: 5%; left: 0%; justify-content: center; background-color: rgb(65, 63, 63); border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-bottom-color: rgb(142, 142, 142); border-left-color: rgb(142, 142, 142); border-right-color: rgb(142, 142, 142); border-top-color: rgb(142, 142, 142); border-top-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 0;">
+            <ui:Label text="ECS_MiniRPG" name="title" class="text-font-main" style="font-size: 64px; -unity-font-style: bold; align-self: center; color: rgb(255, 255, 255);"/>
         </ui:VisualElement>
         <ui:VisualElement name="buttons-layout" style="flex-grow: 1; position: absolute; height: 600px; width: 400px; top: 20%; left: 10%; justify-content: center;">
             <ui:Button text="Start" name="button-start" class="text-font-main button-base button-primary button-size-l"/>

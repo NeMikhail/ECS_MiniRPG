@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="root" picking-mode="Ignore" style="flex-grow: 1; justify-content: center;">
+        <ui:VisualElement name="progressbars-container" style="flex-grow: 1; position: absolute; align-self: center; width: 800px; height: 600px; flex-direction: column; justify-content: space-between;">
+            <ui:VisualElement name="Line1" style="flex-grow: 1; flex-direction: column; justify-content: space-around; align-items: center;">
+                <MAEngine.UI.CustomElements.HorizontalProgressBar name="test-pb-1" style="width: 300px; height: 20px;" />
+                <MAEngine.UI.CustomElements.HorizontalProgressBar name="test-pb-2" style="width: 300px; height: 20px;" />
+                <MAEngine.UI.CustomElements.HorizontalProgressBar name="test-pb-3" style="width: 300px; height: 20px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Line2" style="flex-grow: 1; flex-direction: column; justify-content: space-around; align-items: center;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

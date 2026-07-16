@@ -1,0 +1,65 @@
+.circular-progress-bar {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.circular-progress-bar--small {
+    width: 50px;
+    height: 50px;
+}
+
+.circular-progress-bar--medium {
+    width: 100px;
+    height: 100px;
+}
+
+.circular-progress-bar--large {
+    width: 150px;
+    height: 150px;
+}
+
+.circular-progress-bar--extra-large {
+    width: 200px;
+    height: 200px;
+}
+
+.circular-progress-bar--green {
+    --fill-color: rgb(34, 197, 94);
+    --background-ring-color: rgba(34, 197, 94, 0.2);
+}
+
+.circular-progress-bar--blue {
+    --fill-color: rgb(59, 130, 246);
+    --background-ring-color: rgba(59, 130, 246, 0.2);
+}
+
+.circular-progress-bar--red {
+    --fill-color: rgb(239, 68, 68);
+    --background-ring-color: rgba(239, 68, 68, 0.2);
+}
+
+.circular-progress-bar--yellow {
+    --fill-color: rgb(234, 179, 8);
+    --background-ring-color: rgba(234, 179, 8, 0.2);
+}
+
+.circular-progress-bar--purple {
+    --fill-color: rgb(168, 85, 247);
+    --background-ring-color: rgba(168, 85, 247, 0.2);
+}
+
+#progress-bar-1 {
+    --fill-color: rgb(3, 84, 33);
+    --background-ring-color: rgba(204, 63, 14, 0.3);
+}
+
+#progress-bar-2 {
+    --fill-color: rgb(59, 130, 246);
+    --background-ring-color: rgba(59, 130, 246, 0.3);
+}
+
+#progress-bar-3 {
+    --fill-color: rgb(255, 77, 25);
+    --background-ring-color: rgba(255, 77, 25, 0.3);
+}

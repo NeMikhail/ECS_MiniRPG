@@ -1,5 +1,7 @@
 using System;
 using ECSMiniRPG.ContentManagement;
+using ECSMiniRPG.GameplayModule.Components;
+using ECSMiniRPG.GUIModule.Components;
 using ECSMiniRPG.LocationModule;
 using ECSMiniRPG.PlayerModule.Components;
 using ECSMiniRPG.PlayerModule.Configs;
@@ -135,8 +137,10 @@ namespace ECSMiniRPG.PlayerModule.Systems
             ref var gameConfigs = ref GameWorld.GetResource<GameConfigs>();
             var playerView = instance.GetComponent<PlayerView>();
             var entity = GameWorld.NewEntity<Default>();
+            var health = Health.Create(gameConfigs.PlayerConfig.MaxHealth);
 
             entity.Set(
+                health,
                 new PlayerInputData(),
                 new PlayerMoveSpeed
                 {
@@ -152,6 +156,16 @@ namespace ECSMiniRPG.PlayerModule.Systems
                 }
             );
             entity.Set<PlayerTag>();
+
+            if (playerView.HealthBarView != null)
+            {
+                playerView.HealthBarView.SetCamera(playerView.Camera);
+                playerView.HealthBarView.Bind(health);
+                entity.Set(new HealthBarViewRef
+                {
+                    _value = playerView.HealthBarView
+                });
+            }
         }
 
         public void Destroy()

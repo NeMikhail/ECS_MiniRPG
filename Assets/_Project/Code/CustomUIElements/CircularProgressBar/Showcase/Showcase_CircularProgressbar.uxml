@@ -1,0 +1,19 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Code/CustomUIElements/Showcase/Showcase_CircularProgressbar.uss?fileID=7433441132597879392&amp;guid=4ba929478cccf7e428d53ddcc11bd567&amp;type=3#Showcase_CircularProgressbar"/>
+    <Style src="project://database/Assets/Code/CustomUIElements/CircularProgressBar.uss?fileID=7433441132597879392&amp;guid=0f81896c3621118408c26ccc29ab44b7&amp;type=3#CircularProgressBar"/>
+    <ui:VisualElement name="root" style="flex-direction: row; justify-content: space-around; align-items: center; flex-wrap: wrap; padding: 50px; width: 100%; height: 100%;">
+        <ui:VisualElement name="wrapper-bar1" style="flex-direction: column; align-items: center; margin: 20px;">
+            <ui:Label text="Progress Bar 1 (USS Colors)" style="font-size: 18px; color: rgb(34, 197, 94); margin-bottom: 10px; -unity-font-style: bold;"/>
+            <MAEngine.UI.CustomElements.CircularProgressBar name="progress-bar-1" progress="0" thickness="12" radius="60" fill-mode="Ring" fill-color="rgb(79, 128, 79)"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="wrapper-bar2" style="flex-direction: column; align-items: center; margin: 20px;">
+            <ui:Label text="Progress Bar 2 (USS Colors)" style="font-size: 18px; color: rgb(59, 130, 246); margin-bottom: 10px; -unity-font-style: bold;"/>
+            <MAEngine.UI.CustomElements.CircularProgressBar name="progress-bar-2" progress="0" thickness="8" radius="50" fill-mode="Ring"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="wrapper-bar3" style="flex-direction: column; align-items: center; margin: 20px;">
+            <ui:Label text="Progress Bar 3 (USS Colors)" style="font-size: 18px; color: rgb(255, 127, 39); margin-bottom: 10px; -unity-font-style: bold;"/>
+            <MAEngine.UI.CustomElements.CircularProgressBar name="progress-bar-3" progress="0" thickness="15" radius="70" fill-mode="Ring"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="code-generated-container" style="flex-direction: row; justify-content: space-around; align-items: center; flex-wrap: wrap; width: 100%;"/>
+    </ui:VisualElement>
+</ui:UXML>

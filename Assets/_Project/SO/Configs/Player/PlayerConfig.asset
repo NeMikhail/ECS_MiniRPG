@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.PlayerModule.Configs.PlayerConfig
   _initialSpawnStrategy: {fileID: 11400000, guid: 904c7b6cb4f0d864992bd6f53d392434, type: 2}
   _moveSpeed: 5
+  _maxHealth: 100

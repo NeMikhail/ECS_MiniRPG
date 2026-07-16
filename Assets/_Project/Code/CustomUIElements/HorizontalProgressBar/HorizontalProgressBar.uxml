@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Template name="HorizontalProgressBarTemplate">
+        <MAEngine.UI.CustomElements.HorizontalProgressBar
+            name="horizontal-progress"
+            class="horizontal-progress-bar"
+            progress="0"
+            style="width: 100px; height: 20px;" />
+    </ui:Template>
+</ui:UXML>

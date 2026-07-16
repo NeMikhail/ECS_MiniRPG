@@ -134,6 +134,8 @@ out/
 
 # Build results
 [Dd]ebug/
+!Assets/_Project/Code/Debug/
+!Assets/_Project/Code/Debug/**
 [Rr]elease/
 x64/
 x86/

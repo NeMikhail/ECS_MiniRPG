@@ -1,0 +1,28 @@
+.horizontal-progress-bar {
+    flex-shrink: 0;
+}
+
+.horizontal-progress-bar--green {
+    --fill-color: rgb(51, 204, 51);
+    --background-color: rgba(51, 204, 51, 128);
+}
+
+.horizontal-progress-bar--blue {
+    --fill-color: rgb(51, 102, 204);
+    --background-color: rgba(51, 102, 204, 128);
+}
+
+.horizontal-progress-bar--red {
+    --fill-color: rgb(204, 51, 51);
+    --background-color: rgba(204, 51, 51, 128);
+}
+
+.horizontal-progress-bar--yellow {
+    --fill-color: rgb(204, 178, 51);
+    --background-color: rgba(204, 178, 51, 128);
+}
+
+.horizontal-progress-bar--purple {
+    --fill-color: rgb(128, 51, 204);
+    --background-color: rgba(128, 51, 204, 128);
+}

@@ -428,6 +428,7 @@ Transform:
   - {fileID: 1520376075773076108}
   - {fileID: 3748426144658507202}
   - {fileID: 7850695576640191209}
+  - {fileID: 676187234310218484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &3096904653731750770
@@ -493,3 +494,93 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.PlayerModule.Views.PlayerView
   _rigidbody: {fileID: 2841135418195109081}
+  _healthBarView: {fileID: 5793475616792927641}
+  _camera: {fileID: 5956779299859973008}
+--- !u!1 &7963959109632134734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676187234310218484}
+  - component: {fileID: 5793475616792927641}
+  - component: {fileID: 275325832290527705}
+  - component: {fileID: 3955154194040046987}
+  m_Layer: 0
+  m_Name: HPBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &676187234310218484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7963959109632134734}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.272, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2439618730858967875}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5793475616792927641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7963959109632134734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b879c8c96945245904e0bb6cd2d24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.GUIModule.Views.HealthBarView
+  _document: {fileID: 3955154194040046987}
+  _billboard: {fileID: 275325832290527705}
+  _width: 100
+  _height: 12
+  _fillColor: {r: 0.75, g: 0.08, b: 0.08, a: 1}
+  _backgroundColor: {r: 0.08, g: 0.08, b: 0.08, a: 0.75}
+--- !u!114 &275325832290527705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7963959109632134734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46aeed185e483a04098cf3222d6e44cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.GUIModule.Views.Billboard
+  _camera: {fileID: 0}
+--- !u!114 &3955154194040046987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7963959109632134734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 89f72b34e2a8a4c489d9697f5f28b31f, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: ff7e66186536b214b82526ffd403b44b, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}

@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Template name="VerticalProgressBarTemplate">
+        <MAEngine.UI.CustomElements.VerticalProgressBar
+            name="vertical-progress"
+            class="vertical-progress-bar"
+            progress="0"
+            bar-width="20"
+            bar-height="100" />
+    </ui:Template>
+</ui:UXML>

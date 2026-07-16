@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Template name="CircularProgressBarTemplate">
+        <MAEngine.UI.CustomElements.CircularProgressBar
+            name="circular-progress"
+            class="circular-progress-bar"
+            progress="0"
+            thickness="10"
+            radius="50" />
+    </ui:Template>
+</ui:UXML>

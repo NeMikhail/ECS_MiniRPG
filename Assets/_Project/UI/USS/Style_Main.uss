@@ -1,0 +1,8 @@
+@import url("Buttons.uss");
+
+:root {
+}
+
+.text-font-main {
+    -unity-font-definition: url("project://database/Assets/_Project/Art/UI/Fonts/Gloock-Regular.ttf?fileID=12800000&guid=ee5e122f0770e4f43bca72736438e3b9&type=3#Gloock-Regular");
+}

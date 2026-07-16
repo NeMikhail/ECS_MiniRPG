@@ -1,0 +1,104 @@
+.button-base {
+    align-self: center;
+    justify-content: center;
+    -unity-text-align: middle-center;
+    color: rgb(245, 241, 232);
+    background-color: rgb(35, 42, 52);
+    border-top-color: rgb(102, 116, 132);
+    border-right-color: rgb(102, 116, 132);
+    border-bottom-color: rgb(22, 27, 34);
+    border-left-color: rgb(102, 116, 132);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 3px;
+    border-left-width: 2px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    -unity-font-style: bold;
+}
+
+.button-base:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 65, 80);
+    border-top-color: rgb(139, 162, 184);
+    border-right-color: rgb(139, 162, 184);
+    border-bottom-color: rgb(42, 54, 68);
+    border-left-color: rgb(139, 162, 184);
+}
+
+.button-base:active {
+    color: rgb(225, 230, 236);
+    background-color: rgb(25, 31, 39);
+    border-top-color: rgb(18, 22, 28);
+    border-right-color: rgb(70, 82, 96);
+    border-bottom-color: rgb(70, 82, 96);
+    border-left-color: rgb(18, 22, 28);
+}
+
+.button-primary {
+    background-color: rgb(55, 78, 74);
+    border-top-color: rgb(132, 165, 150);
+    border-right-color: rgb(132, 165, 150);
+    border-bottom-color: rgb(30, 45, 43);
+    border-left-color: rgb(132, 165, 150);
+}
+
+.button-primary:hover {
+    background-color: rgb(69, 99, 92);
+    border-top-color: rgb(169, 205, 188);
+    border-right-color: rgb(169, 205, 188);
+    border-bottom-color: rgb(42, 65, 60);
+    border-left-color: rgb(169, 205, 188);
+}
+
+.button-secondary {
+    background-color: rgb(47, 48, 59);
+    border-top-color: rgb(126, 128, 150);
+    border-right-color: rgb(126, 128, 150);
+    border-bottom-color: rgb(29, 30, 38);
+    border-left-color: rgb(126, 128, 150);
+}
+
+.button-secondary:hover {
+    background-color: rgb(60, 62, 78);
+    border-top-color: rgb(157, 161, 188);
+    border-right-color: rgb(157, 161, 188);
+    border-bottom-color: rgb(42, 44, 56);
+    border-left-color: rgb(157, 161, 188);
+}
+
+.button-danger {
+    background-color: rgb(83, 48, 48);
+    border-top-color: rgb(164, 113, 113);
+    border-right-color: rgb(164, 113, 113);
+    border-bottom-color: rgb(45, 27, 27);
+    border-left-color: rgb(164, 113, 113);
+}
+
+.button-danger:hover {
+    background-color: rgb(104, 59, 59);
+    border-top-color: rgb(203, 143, 143);
+    border-right-color: rgb(203, 143, 143);
+    border-bottom-color: rgb(64, 36, 36);
+    border-left-color: rgb(203, 143, 143);
+}
+
+.button-size-s {
+    width: 220px;
+    height: 52px;
+    font-size: 22px;
+}
+
+.button-size-m {
+    width: 280px;
+    height: 64px;
+    font-size: 28px;
+}
+
+.button-size-l {
+    width: 350px;
+    height: 80px;
+    font-size: 32px;
+}

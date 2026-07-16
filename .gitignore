@@ -179,3 +179,4 @@ Assets/_Project/Docs/**
 # --- Unity MCP Server ---
 Tools/UnityMcpServer/node_modules/
 Tools/UnityMcpServer/*.log
+Tools/UnityMcpServer/.unity-mcp-server.pid

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ECSMiniRPG.Core;
 using ECSMiniRPG.PlayerModule.Configs;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 namespace ECSMiniRPG.LocationModule
 {
-    public sealed class LocationView : SerializedMonoBehaviour
+    public sealed class LocationView : SerializedMonoBehaviour, IView
     {
         [OdinSerialize] private Dictionary<string, Transform> _spawnPoints = new Dictionary<string, Transform>();
 

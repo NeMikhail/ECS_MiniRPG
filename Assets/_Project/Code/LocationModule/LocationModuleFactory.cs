@@ -1,5 +1,4 @@
 using ECSMiniRPG.Core;
-using UnityEngine;
 
 namespace ECSMiniRPG.LocationModule
 {
@@ -34,12 +33,7 @@ namespace ECSMiniRPG.LocationModule
 
         private void SetupLocationView()
         {
-            var locationView = _viewsProvider.LocationView;
-
-            if (locationView == null)
-            {
-                Debug.LogError("LocationView is not assigned in ViewsProvider.");
-            }
+            var locationView = _viewsProvider.GetView<LocationView>();
 
             if (locationView != null)
             {

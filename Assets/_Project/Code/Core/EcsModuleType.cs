@@ -7,6 +7,7 @@ namespace ECSMiniRPG.Core
         Input = 2,
         Player = 3,
         Location = 4,
-        MainMenu = 5
+        MainMenu = 5,
+        GUI = 6
     }
 }

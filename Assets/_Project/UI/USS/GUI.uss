@@ -1,0 +1,46 @@
+.gui-root {
+    flex-grow: 1;
+}
+
+.gui-overlay {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+.gui-panel {
+    width: 420px;
+    min-height: 420px;
+    align-items: center;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: rgba(24, 24, 24, 0.9);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.gui-panel-title {
+    margin-bottom: 42px;
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    -unity-font-style: bold;
+}
+
+.gui-button-stack {
+    align-items: center;
+}
+
+.gui-button-stack > Button {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

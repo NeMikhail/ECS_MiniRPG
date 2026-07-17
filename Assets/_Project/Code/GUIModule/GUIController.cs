@@ -3,6 +3,8 @@ using ECSMiniRPG.GUIModule.Elements;
 using ECSMiniRPG.InputSystem;
 using ECSMiniRPG.InventoryModule;
 using ECSMiniRPG.InventoryModule.Components;
+using ECSMiniRPG.InventoryModule.Drop;
+using ECSMiniRPG.InventoryModule.Runtime;
 using ECSMiniRPG.PlayerModule.Components;
 using FFS.Libraries.StaticEcs;
 using UnityEngine;
@@ -95,6 +97,8 @@ namespace ECSMiniRPG.GUIModule
             _inventoryView.InventorySlotDoubleClicked += OnInventorySlotDoubleClicked;
             _inventoryView.EquipmentSlotDoubleClicked += OnEquipmentSlotDoubleClicked;
             _inventoryView.ItemDropped += OnInventoryItemDropped;
+            _inventoryView.ItemDroppedOutside += OnInventoryItemDroppedOutside;
+            _inventoryView.ItemDropAmountRequested += OnInventoryItemDropAmountRequested;
             _inventoryView.CloseClicked += CloseInventory;
             _inventoryView.Bind();
         }
@@ -104,6 +108,8 @@ namespace ECSMiniRPG.GUIModule
             _inventoryView.InventorySlotDoubleClicked -= OnInventorySlotDoubleClicked;
             _inventoryView.EquipmentSlotDoubleClicked -= OnEquipmentSlotDoubleClicked;
             _inventoryView.ItemDropped -= OnInventoryItemDropped;
+            _inventoryView.ItemDroppedOutside -= OnInventoryItemDroppedOutside;
+            _inventoryView.ItemDropAmountRequested -= OnInventoryItemDropAmountRequested;
             _inventoryView.CloseClicked -= CloseInventory;
             _inventoryView.Unbind();
         }
@@ -153,6 +159,54 @@ namespace ECSMiniRPG.GUIModule
             }
         }
 
+
+        private void OnInventoryItemDroppedOutside(InventoryDragData sourceData)
+        {
+            var count = GetItemCount(sourceData);
+            EnqueueDropCommand(sourceData, count, InventoryDropSourceType.DragOutside);
+        }
+
+        private void OnInventoryItemDropAmountRequested(InventoryDragData sourceData, int count)
+        {
+            var itemCount = GetItemCount(sourceData);
+
+            if (count <= 0 && itemCount > 0)
+            {
+                _inventoryView.OpenDropDialog(sourceData, itemCount);
+            }
+
+            if (count > 0)
+            {
+                EnqueueDropCommand(sourceData, count, InventoryDropSourceType.Hotkey);
+            }
+        }
+
+        private int GetItemCount(InventoryDragData sourceData)
+        {
+            var count = 0;
+
+            foreach (var entity in GameWorld.Query<All<PlayerTag, InventoryComponent>>().Entities())
+            {
+                ref readonly var inventory = ref entity.Read<InventoryComponent>();
+                var item = InventoryOperations.GetItem(inventory._state, sourceData);
+
+                if (item != null)
+                {
+                    count = item.Count;
+                }
+            }
+
+            return count;
+        }
+
+        private void EnqueueDropCommand(InventoryDragData sourceData, int count, InventoryDropSourceType sourceType)
+        {
+            foreach (var entity in GameWorld.Query<All<PlayerTag, InventoryComponent>>().Entities())
+            {
+                ref var commandQueue = ref GameWorld.GetResource<InventoryDropCommandQueue>();
+                commandQueue.Enqueue(entity, sourceData, count, sourceType);
+            }
+        }
         private void EnqueueInventoryCommand(InventoryCommand command)
         {
             ref var commandQueue = ref GameWorld.GetResource<InventoryCommandQueue>();

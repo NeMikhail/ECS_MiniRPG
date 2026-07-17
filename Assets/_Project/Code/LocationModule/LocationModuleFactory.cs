@@ -1,9 +1,15 @@
 using ECSMiniRPG.Core;
+using ECSMiniRPG.LocationModule.Resources.Loot;
+using ECSMiniRPG.LocationModule.Resources.Systems;
 
 namespace ECSMiniRPG.LocationModule
 {
     public sealed class LocationModuleFactory : IEcsModuleFactory
     {
+        private static readonly short _resourceInteractionFailureSystemOrder = 10;
+        private static readonly short _resourceSpawnSystemOrder = 20;
+        private static readonly short _lootSpawnSystemOrder = 30;
+
         private readonly ViewsProvider _viewsProvider;
         private LocationRuntimeData _locationRuntimeData;
 
@@ -17,10 +23,14 @@ namespace ECSMiniRPG.LocationModule
             _locationRuntimeData = new LocationRuntimeData();
             SetupLocationView();
             GameWorld.SetResource(_locationRuntimeData);
+            GameWorld.SetResource(new LocationLootSpawnCommandQueue());
         }
 
         public void RegisterUpdateSystems()
         {
+            GameSystems.Add(new ResourceGatherInteractionFailureSystem(), _resourceInteractionFailureSystemOrder);
+            GameSystems.Add(new LocationResourceSpawnSystem(), _resourceSpawnSystemOrder);
+            GameSystems.Add(new LocationLootSpawnSystem(), _lootSpawnSystemOrder);
         }
 
         public void RegisterFixedSystems()

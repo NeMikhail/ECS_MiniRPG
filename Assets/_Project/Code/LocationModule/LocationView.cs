@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using ECSMiniRPG.Core;
+using ECSMiniRPG.LocationModule.Resources.Views;
 using ECSMiniRPG.PlayerModule.Configs;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -10,6 +11,10 @@ namespace ECSMiniRPG.LocationModule
     public sealed class LocationView : SerializedMonoBehaviour, IView
     {
         [OdinSerialize] private Dictionary<string, Transform> _spawnPoints = new Dictionary<string, Transform>();
+        [SerializeField] private ResourceNodesSpawnView _resourceNodesSpawn;
+        [SerializeField, HideInInspector] private List<LocationResourceSpawnPointView> _resourceSpawnPoints = new List<LocationResourceSpawnPointView>();
+
+        public IReadOnlyList<LocationResourceSpawnPointView> ResourceSpawnPoints => GetResourceSpawnPoints();
 
         public bool TryGetSpawnPose(string spawnPointId, out PlayerSpawnPose spawnPose)
         {
@@ -32,6 +37,19 @@ namespace ECSMiniRPG.LocationModule
             }
 
             return hasSpawnPose;
+        }
+
+
+        private IReadOnlyList<LocationResourceSpawnPointView> GetResourceSpawnPoints()
+        {
+            IReadOnlyList<LocationResourceSpawnPointView> resourceSpawnPoints = _resourceSpawnPoints;
+
+            if (_resourceNodesSpawn != null)
+            {
+                resourceSpawnPoints = _resourceNodesSpawn.ResourceSpawnPoints;
+            }
+
+            return resourceSpawnPoints;
         }
 
         private bool TryCreateSpawnPose(string spawnPointId, out PlayerSpawnPose spawnPose)

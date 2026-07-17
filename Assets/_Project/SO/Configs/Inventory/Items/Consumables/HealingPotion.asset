@@ -15,6 +15,7 @@ MonoBehaviour:
   _id: consumable_potion_healing
   _title: Healing potion
   _icon: {fileID: 21300000, guid: bc1982012198d51449c843a76bf1f4b7, type: 3}
+  _worldPresentation: {fileID: 11400000, guid: c7695cbb9b4dbc94686f6688c33d7aec, type: 2}
   _maxStack: 5
   _statModifiers: []
   _healValue: 25

@@ -1,5 +1,6 @@
 using System;
 using ECSMiniRPG.ContentManagement;
+using ECSMiniRPG.GameplayModule.LongActions.Components;
 using ECSMiniRPG.GameplayModule.Components;
 using ECSMiniRPG.InventoryModule.Components;
 using ECSMiniRPG.GUIModule.Components;
@@ -156,6 +157,10 @@ namespace ECSMiniRPG.PlayerModule.Systems
                 new PlayerContentRef
                 {
                     _instance = instance
+                },
+                new LongActionTransformRef
+                {
+                    _value = playerView.transform
                 },
                 InventoryComponent.Create(),
                 new InventoryEquipmentStats()

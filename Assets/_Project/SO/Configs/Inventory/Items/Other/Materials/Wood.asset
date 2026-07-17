@@ -15,5 +15,6 @@ MonoBehaviour:
   _id: material_wood_basic
   _title: Wood log
   _icon: {fileID: 21300000, guid: 13a083723874ac448957f6f188dd7cda, type: 3}
+  _worldPresentation: {fileID: 11400000, guid: 2771785f18f5b524bb90a434bd9e706e, type: 2}
   _maxStack: 32
   _statModifiers: []

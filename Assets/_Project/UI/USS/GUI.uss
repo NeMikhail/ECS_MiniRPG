@@ -156,3 +156,61 @@
     font-size: 12px;
     -unity-font-style: bold;
 }
+.inventory-drop-dialog {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.54);
+}
+
+.inventory-drop-dialog-window {
+    width: 520px;
+    min-height: 220px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(24, 24, 24, 0.96);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(96, 96, 96);
+    border-right-color: rgb(96, 96, 96);
+    border-top-color: rgb(96, 96, 96);
+    border-bottom-color: rgb(96, 96, 96);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.inventory-drop-dialog-label {
+    margin-bottom: 18px;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.inventory-drop-dialog-slider {
+    width: 440px;
+    margin-bottom: 22px;
+}
+
+.inventory-drop-dialog-buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventory-drop-dialog-buttons > Button {
+    margin-left: 8px;
+    margin-right: 8px;
+}

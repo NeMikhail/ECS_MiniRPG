@@ -15,6 +15,7 @@ MonoBehaviour:
   _id: weapon_bow_basic
   _title: Bow
   _icon: {fileID: 21300000, guid: ac8ce3ac74c3a3d4db5af374471b6f61, type: 3}
+  _worldPresentation: {fileID: 11400000, guid: eae8a834f60a318479e5853390482e6c, type: 2}
   _maxStack: 1
   _statModifiers: []
   _slotType: 11

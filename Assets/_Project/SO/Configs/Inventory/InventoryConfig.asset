@@ -33,3 +33,13 @@ MonoBehaviour:
     _count: 10
   - _preset: {fileID: 11400000, guid: d20c62722c39f8b4a8a3d843a7e21d23, type: 2}
     _count: 1
+  - _preset: {fileID: 11400000, guid: 0d0d792081d9d2d4096e7cb35a0e5492, type: 2}
+    _count: 1
+  - _preset: {fileID: 11400000, guid: 441a1ad242c283149a05ab78c11a3dba, type: 2}
+    _count: 1
+  - _preset: {fileID: 11400000, guid: 16c76e1ce7df95448a32ed0c1f1d4fa8, type: 2}
+    _count: 1
+  _pickupRadius: 2
+  _pickupHoldDuration: 0.3
+  _pickupRepeatInterval: 0.2
+  _dropRadius: 1.5

@@ -15,6 +15,7 @@ MonoBehaviour:
   _id: armor_helment_basic
   _title: Helment
   _icon: {fileID: 21300000, guid: 885c5fdb98d5a0d479a7e3bcf67d5a1b, type: 3}
+  _worldPresentation: {fileID: 11400000, guid: 954c7e6a806771c4a9e3aeb3afe58658, type: 2}
   _maxStack: 1
   _statModifiers: []
   _slotType: 1

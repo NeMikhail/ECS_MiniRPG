@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5751b5c53733d4f4f82cbe416f2a9b18, type: 3}
+  m_Name: ResourceNode_StoneT2
+  m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Configs.ResourceNodeConfig
+  _id: ResourceNode_StoneT2
+  _prefabKey: ResourceNode_StoneT2
+  _requiredTool: {fileID: 11400000, guid: 1fdff77f3822a914d980ceb7cd3a5a07, type: 2}
+  _cancelPolicy: {fileID: 11400000, guid: d1f2f32f659b88a41ad62146f53fd12e, type: 2}
+  _gatherDuration: 1
+  _gatherRange: 2
+  _loot:
+  - _item: {fileID: 11400000, guid: 94a610a4151d8c14fad561aadac323bf, type: 2}
+    _minCount: 2
+    _maxCount: 4

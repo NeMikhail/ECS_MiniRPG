@@ -143,6 +143,8 @@ MonoBehaviour:
     _moduleType: 6
   - _isEnabled: 1
     _moduleType: 7
+  - _isEnabled: 1
+    _moduleType: 8
 --- !u!114 &6635643808000808149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +172,10 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
+    - Name: 
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 6
       Data: 
@@ -180,5 +185,3 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-
-

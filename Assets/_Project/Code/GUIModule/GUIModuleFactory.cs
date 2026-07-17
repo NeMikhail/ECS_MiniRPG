@@ -7,6 +7,7 @@ namespace ECSMiniRPG.GUIModule
     public sealed class GUIModuleFactory : IEcsModuleFactory
     {
         private static readonly short _guiSystemOrder = 0;
+        private static readonly short _healthBarBindingSystemOrder = 50;
 
         private readonly ViewsProvider _viewsProvider;
         private GUIController _guiController;
@@ -39,6 +40,7 @@ namespace ECSMiniRPG.GUIModule
             if (_guiController != null)
             {
                 GameSystems.Add(new GUISystem(), _guiSystemOrder);
+                GameSystems.Add(new HealthBarBindingSystem(), _healthBarBindingSystemOrder);
             }
         }
 

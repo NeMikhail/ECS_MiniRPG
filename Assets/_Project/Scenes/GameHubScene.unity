@@ -1882,18 +1882,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LOGIC_Game
       objectReference: {fileID: 0}
-    - target: {fileID: 6404111839921028883, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
-      propertyPath: _moduleInstallerConfigs.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404111839921028883, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
-      propertyPath: _moduleInstallerConfigs.Array.data[5]._moduleType
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
+    - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
       value: 3
@@ -1909,6 +1905,18 @@ PrefabInstance:
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: 'serializationData.PrefabModifications.Array.data[2]'
       value: '"path":"_views.[1]","value":$eref:1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.data[1].Data
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.data[3].Entry
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.data[4].Entry
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size

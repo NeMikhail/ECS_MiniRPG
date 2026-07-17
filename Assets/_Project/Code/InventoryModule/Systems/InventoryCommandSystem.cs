@@ -1,3 +1,4 @@
+using ECSMiniRPG.GameplayModule;
 using ECSMiniRPG.GameplayModule.Components;
 using ECSMiniRPG.InventoryModule.Components;
 using ECSMiniRPG.InventoryModule.Runtime;
@@ -24,7 +25,7 @@ namespace ECSMiniRPG.InventoryModule.Systems
             {
                 ref var inventory = ref entity.Ref<InventoryComponent>();
                 ref var health = ref entity.Ref<Health>();
-                var hasChanged = ProcessCommand(command, inventory._state, ref health);
+                var hasChanged = ProcessCommand(command, inventory._state, health, entity);
 
                 if (hasChanged)
                 {
@@ -33,13 +34,19 @@ namespace ECSMiniRPG.InventoryModule.Systems
             }
         }
 
-        private bool ProcessCommand(InventoryCommand command, InventoryState state, ref Health health)
+        private bool ProcessCommand(InventoryCommand command, InventoryState state, Health health, GameWorld.Entity entity)
         {
             var hasChanged = false;
 
             if (command._type == InventoryCommandType.UseOrEquipInventorySlot)
             {
-                hasChanged = InventoryOperations.TryUseOrEquipFromInventory(state, command._sourceInventoryIndex, ref health);
+                hasChanged = InventoryOperations.TryUseOrEquipFromInventory(state, command._sourceInventoryIndex, health, out var healValue);
+
+                if (hasChanged && healValue > 0f)
+                {
+                    ref var healthCommandQueue = ref GameWorld.GetResource<HealthCommandQueue>();
+                    healthCommandQueue.EnqueueHeal(entity, healValue);
+                }
             }
 
             if (command._type == InventoryCommandType.UnequipEquipmentSlot)

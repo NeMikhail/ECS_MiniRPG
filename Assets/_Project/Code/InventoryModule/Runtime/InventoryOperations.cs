@@ -86,13 +86,14 @@ namespace ECSMiniRPG.InventoryModule.Runtime
             return hasAdded;
         }
 
-        public static bool TryUseOrEquipFromInventory(InventoryState state, int inventorySlotIndex, ref Health health)
+        public static bool TryUseOrEquipFromInventory(InventoryState state, int inventorySlotIndex, Health health, out float healValue)
         {
+            healValue = 0f;
             var hasChanged = TryEquipFromInventory(state, inventorySlotIndex);
 
             if (!hasChanged)
             {
-                hasChanged = TryUseFromInventory(state, inventorySlotIndex, ref health);
+                hasChanged = TryUseFromInventory(state, inventorySlotIndex, health, out healValue);
             }
 
             return hasChanged;
@@ -251,8 +252,9 @@ namespace ECSMiniRPG.InventoryModule.Runtime
             return snapshot;
         }
 
-        private static bool TryUseFromInventory(InventoryState state, int inventorySlotIndex, ref Health health)
+        private static bool TryUseFromInventory(InventoryState state, int inventorySlotIndex, Health health, out float healValue)
         {
+            healValue = 0f;
             var hasUsed = false;
             var inventorySlot = GetInventorySlot(state, inventorySlotIndex);
 
@@ -262,7 +264,7 @@ namespace ECSMiniRPG.InventoryModule.Runtime
 
                 if (consumable != null && consumable.CanUse(health))
                 {
-                    consumable.Use(ref health);
+                    healValue = consumable.HealValue;
                     ReduceItemCount(inventorySlot);
                     hasUsed = true;
                 }

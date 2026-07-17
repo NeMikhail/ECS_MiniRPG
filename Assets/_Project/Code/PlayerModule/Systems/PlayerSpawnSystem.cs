@@ -139,9 +139,11 @@ namespace ECSMiniRPG.PlayerModule.Systems
             var playerView = instance.GetComponent<PlayerView>();
             var entity = GameWorld.NewEntity<Default>();
             var health = Health.Create(gameConfigs.PlayerConfig.MaxHealth);
+            var armor = Armor.Create(0f);
 
             entity.Set(
                 health,
+                armor,
                 new PlayerInputData(),
                 new PlayerMoveSpeed
                 {
@@ -156,7 +158,6 @@ namespace ECSMiniRPG.PlayerModule.Systems
                     _instance = instance
                 },
                 InventoryComponent.Create(),
-                Armor.Create(0f),
                 new InventoryEquipmentStats()
             );
             entity.Set<PlayerTag>();
@@ -164,7 +165,6 @@ namespace ECSMiniRPG.PlayerModule.Systems
             if (playerView.HealthBarView != null)
             {
                 playerView.HealthBarView.SetCamera(playerView.Camera);
-                playerView.HealthBarView.Bind(health);
                 entity.Set(new HealthBarViewRef
                 {
                     _value = playerView.HealthBarView

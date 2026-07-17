@@ -9,7 +9,8 @@ namespace ECSMiniRPG.Core
         Location = 4,
         MainMenu = 5,
         GUI = 6,
-        Inventory = 7
+        Inventory = 7,
+        Gameplay = 8
     }
 }
 

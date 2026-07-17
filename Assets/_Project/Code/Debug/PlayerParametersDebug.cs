@@ -1,3 +1,5 @@
+using System;
+using ECSMiniRPG.GameplayModule;
 using ECSMiniRPG.GameplayModule.Components;
 using ECSMiniRPG.InventoryModule.Components;
 using ECSMiniRPG.InventoryModule.Runtime;
@@ -41,36 +43,38 @@ namespace ECSMiniRPG.DebugTools
         [Button]
         private void RestoreHealth()
         {
-            if (CanDebug())
+            EnqueueHealthCommand(queue =>
             {
                 foreach (var entity in GameWorld.Query<All<PlayerTag, Health>>().Entities())
                 {
-                    ref var health = ref entity.Ref<Health>();
-                    health.SetCurrentValue(health._maxValue.Value);
+                    queue.EnqueueRestore(entity);
                 }
-            }
+            });
         }
 
         [Button]
         private void Kill()
         {
-            SetCurrentHealth(_minHealthValue);
+            EnqueueHealthCommand(queue =>
+            {
+                foreach (var entity in GameWorld.Query<All<PlayerTag, Health>>().Entities())
+                {
+                    queue.EnqueueKill(entity);
+                }
+            });
         }
 
         [Button]
         private void SetMaxHealth()
         {
             var maxHealth = Mathf.Max(_minHealthValue, _maxHealthValue);
-
-            if (CanDebug())
+            EnqueueHealthCommand(queue =>
             {
                 foreach (var entity in GameWorld.Query<All<PlayerTag, Health>>().Entities())
                 {
-                    ref var health = ref entity.Ref<Health>();
-                    health._maxValue.Value = maxHealth;
-                    health.SetCurrentValue(health._currentValue.Value);
+                    queue.EnqueueSetMax(entity, maxHealth);
                 }
-            }
+            });
         }
 
         [Button]
@@ -131,61 +135,54 @@ namespace ECSMiniRPG.DebugTools
 
         private void ApplyDamage(float damage)
         {
-            var clampedDamage = Mathf.Max(_minHealthValue, damage);
-
-            if (CanDebug())
+            EnqueueHealthCommand(queue =>
             {
-                foreach (var entity in GameWorld.Query<All<PlayerTag, Health, Armor>>().Entities())
+                foreach (var entity in GameWorld.Query<All<PlayerTag, Health>>().Entities())
                 {
-                    ref var health = ref entity.Ref<Health>();
-                    ref readonly var armor = ref entity.Read<Armor>();
-                    var damageMultiplier = 1f / (1f + Mathf.Max(_minHealthValue, armor._value.Value));
-                    var finalDamage = clampedDamage * damageMultiplier;
-                    health.SetCurrentValue(health._currentValue.Value - finalDamage);
+                    queue.EnqueueDamage(entity, damage);
                 }
-            }
+            });
         }
 
         private void ApplyDirectDamage(float damage)
         {
-            ChangeCurrentHealth(-Mathf.Max(_minHealthValue, damage));
+            EnqueueHealthCommand(queue =>
+            {
+                foreach (var entity in GameWorld.Query<All<PlayerTag, Health>>().Entities())
+                {
+                    queue.EnqueueDirectDamage(entity, damage);
+                }
+            });
         }
 
         private void ChangeCurrentHealth(float delta)
         {
-            if (CanDebug())
+            EnqueueHealthCommand(queue =>
             {
                 foreach (var entity in GameWorld.Query<All<PlayerTag, Health>>().Entities())
                 {
-                    ref var health = ref entity.Ref<Health>();
-                    health.SetCurrentValue(health._currentValue.Value + delta);
-                }
-            }
-        }
+                    if (delta >= 0f)
+                    {
+                        queue.EnqueueHeal(entity, delta);
+                    }
 
-        private void SetCurrentHealth(float value)
-        {
-            if (CanDebug())
-            {
-                foreach (var entity in GameWorld.Query<All<PlayerTag, Health>>().Entities())
-                {
-                    ref var health = ref entity.Ref<Health>();
-                    health.SetCurrentValue(value);
+                    if (delta < 0f)
+                    {
+                        queue.EnqueueDirectDamage(entity, -delta);
+                    }
                 }
-            }
+            });
         }
 
         private void ChangeMaxHealth(float delta)
         {
-            if (CanDebug())
+            EnqueueHealthCommand(queue =>
             {
                 foreach (var entity in GameWorld.Query<All<PlayerTag, Health>>().Entities())
                 {
-                    ref var health = ref entity.Ref<Health>();
-                    health._maxValue.Value = Mathf.Max(_minHealthValue, health._maxValue.Value + delta);
-                    health.SetCurrentValue(health._currentValue.Value);
+                    queue.EnqueueChangeMax(entity, delta);
                 }
-            }
+            });
         }
 
         private void ChangeSpeed(float delta)
@@ -197,6 +194,15 @@ namespace ECSMiniRPG.DebugTools
                     ref var speed = ref entity.Ref<PlayerMoveSpeed>();
                     speed._value = Mathf.Max(_minSpeedValue, speed._value + delta);
                 }
+            }
+        }
+
+        private void EnqueueHealthCommand(Action<HealthCommandQueue> enqueue)
+        {
+            if (CanDebug())
+            {
+                ref var queue = ref GameWorld.GetResource<HealthCommandQueue>();
+                enqueue(queue);
             }
         }
 
@@ -213,4 +219,3 @@ namespace ECSMiniRPG.DebugTools
         }
     }
 }
-

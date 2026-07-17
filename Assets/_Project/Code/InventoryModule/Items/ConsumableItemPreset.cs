@@ -8,14 +8,11 @@ namespace ECSMiniRPG.InventoryModule.Items
     {
         [SerializeField] private float _healValue = 25f;
 
+        public float HealValue => _healValue;
+
         public bool CanUse(Health health)
         {
             return health._currentValue.Value < health._maxValue.Value;
-        }
-
-        public void Use(ref Health health)
-        {
-            health.SetCurrentValue(health._currentValue.Value + _healValue);
         }
     }
 }

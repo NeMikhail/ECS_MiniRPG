@@ -64,6 +64,36 @@ namespace ECSMiniRPG.InventoryModule.Runtime
             return hasAddedAll;
         }
 
+
+        public static int AddItemPartial(InventoryState state, ItemPreset preset, int count)
+        {
+            var addedCount = 0;
+            var remainingCount = Mathf.Max(0, count);
+
+            while (remainingCount > 0)
+            {
+                var stackCount = remainingCount <= preset.MaxStack ? remainingCount : preset.MaxStack;
+                var item = new InventoryItemInstance(state.GetNextInstanceId(), preset, stackCount);
+                var hasAdded = TryAddItem(state, item);
+                var currentAddedCount = stackCount - Mathf.Max(0, item.Count);
+
+                if (hasAdded)
+                {
+                    currentAddedCount = stackCount;
+                }
+
+                addedCount += currentAddedCount;
+                remainingCount -= currentAddedCount;
+
+                if (currentAddedCount <= 0)
+                {
+                    remainingCount = 0;
+                }
+            }
+
+            return addedCount;
+        }
+
         public static bool TryAddItem(InventoryState state, InventoryItemInstance item)
         {
             var hasAdded = false;
@@ -86,6 +116,52 @@ namespace ECSMiniRPG.InventoryModule.Runtime
             return hasAdded;
         }
 
+
+        public static InventoryItemInstance GetItem(InventoryState state, InventoryDragData sourceData)
+        {
+            InventoryItemInstance item = null;
+
+            if (sourceData._sourceType == InventorySlotSourceType.Inventory)
+            {
+                var slot = GetInventorySlot(state, sourceData._inventoryIndex);
+
+                if (slot != null)
+                {
+                    item = slot.Item;
+                }
+            }
+
+            if (sourceData._sourceType == InventorySlotSourceType.Equipment)
+            {
+                var slot = GetEquipmentSlot(state, sourceData._equipmentSlotId);
+
+                if (slot != null)
+                {
+                    item = slot.Item;
+                }
+            }
+
+            return item;
+        }
+
+        public static int RemoveItem(InventoryState state, InventoryDragData sourceData, int count)
+        {
+            var removedCount = 0;
+
+            if (sourceData._sourceType == InventorySlotSourceType.Inventory)
+            {
+                var slot = GetInventorySlot(state, sourceData._inventoryIndex);
+                removedCount = RemoveItem(slot, count);
+            }
+
+            if (sourceData._sourceType == InventorySlotSourceType.Equipment)
+            {
+                var slot = GetEquipmentSlot(state, sourceData._equipmentSlotId);
+                removedCount = RemoveItem(slot, count);
+            }
+
+            return removedCount;
+        }
         public static bool TryUseOrEquipFromInventory(InventoryState state, int inventorySlotIndex, Health health, out float healValue)
         {
             healValue = 0f;
@@ -252,6 +328,47 @@ namespace ECSMiniRPG.InventoryModule.Runtime
             return snapshot;
         }
 
+
+        private static int RemoveItem(InventorySlotData slot, int count)
+        {
+            var removedCount = 0;
+
+            if (slot != null && slot.Item != null)
+            {
+                removedCount = RemoveItem(slot.Item, count);
+
+                if (slot.Item.Count <= 0)
+                {
+                    slot.Clear();
+                }
+            }
+
+            return removedCount;
+        }
+
+        private static int RemoveItem(EquipmentSlotData slot, int count)
+        {
+            var removedCount = 0;
+
+            if (slot != null && slot.Item != null)
+            {
+                removedCount = RemoveItem(slot.Item, count);
+
+                if (slot.Item.Count <= 0)
+                {
+                    slot.Clear();
+                }
+            }
+
+            return removedCount;
+        }
+
+        private static int RemoveItem(InventoryItemInstance item, int count)
+        {
+            var removedCount = Mathf.Min(item.Count, Mathf.Max(0, count));
+            item.SetCount(item.Count - removedCount);
+            return removedCount;
+        }
         private static bool TryUseFromInventory(InventoryState state, int inventorySlotIndex, Health health, out float healValue)
         {
             healValue = 0f;

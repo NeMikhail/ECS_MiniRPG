@@ -27,6 +27,16 @@ namespace ECSMiniRPG.InputSystem
             return _newInput.GUI.WasInventoryPressedThisFrame();
         }
 
+        public bool WasInteractPressedThisFrame()
+        {
+            return _isPlayerInputBlocked ? false : _newInput.Player.WasInteractPressedThisFrame();
+        }
+
+        public bool IsPickUpPressed()
+        {
+            return _isPlayerInputBlocked ? false : _newInput.Player.IsPickUpPressed();
+        }
+
         public void SetPlayerInputBlocked(bool isBlocked)
         {
             if (_isPlayerInputBlocked != isBlocked)

@@ -8,6 +8,8 @@ namespace ECSMiniRPG.InputSystem
         private static readonly string _playerMapName = "Player";
         private static readonly string _guiMapName = "GUI";
         private static readonly string _moveActionName = "Move";
+        private static readonly string _interactActionName = "Interact";
+        private static readonly string _pickUpActionName = "PickUp";
         private static readonly string _pauseActionName = "Pause";
         private static readonly string _inventoryActionName = "Inventory";
 
@@ -41,9 +43,13 @@ namespace ECSMiniRPG.InputSystem
             {
                 _map = map;
                 Move = _map.FindAction(_moveActionName, true);
+                Interact = _map.FindAction(_interactActionName, true);
+                PickUp = _map.FindAction(_pickUpActionName, true);
             }
 
             public InputAction Move { get; }
+            public InputAction Interact { get; }
+            public InputAction PickUp { get; }
 
             public void Enable()
             {
@@ -58,6 +64,16 @@ namespace ECSMiniRPG.InputSystem
             public Vector2 ReadMove()
             {
                 return Move.ReadValue<Vector2>();
+            }
+
+            public bool WasInteractPressedThisFrame()
+            {
+                return Interact.WasPressedThisFrame();
+            }
+
+            public bool IsPickUpPressed()
+            {
+                return PickUp.IsPressed();
             }
         }
 

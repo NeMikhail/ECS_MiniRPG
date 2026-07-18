@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace src.Editor.CMSEditor.Utils
+{
+    public class CMSHelpers
+    {
+        public static void ReloadCMS()
+        {
+            CMSRuntime.Unload();
+            CMSRuntime.Init();
+        }
+        
+        public static List<CMSEntityPfb> FilterByTags(List<CMSEntityPfb> prefabs, Type[] tagTypes)
+        {
+            if (prefabs == null || prefabs.Count == 0) return new List<CMSEntityPfb>();
+            if (tagTypes == null || tagTypes.Length == 0) return prefabs;
+
+            var allowed = new HashSet<Type>(tagTypes.Where(t => t != null));
+
+            return prefabs
+                .Where(p => p != null)
+                .Where(p =>
+                {
+                    var comps = p.Components;
+                    if (comps == null) return false;
+
+                    return comps.Any(c =>
+                    {
+                        if (c == null) return false;
+                        var t = c.GetType();
+
+                        while (t != null)
+                        {
+                            if (allowed.Contains(t))
+                                return true;
+
+                            t = t.BaseType;
+                        }
+
+                        return c.GetType().GetInterfaces().Any(i => allowed.Contains(i));
+                    });
+                })
+                .ToList();
+        }
+    }
+}

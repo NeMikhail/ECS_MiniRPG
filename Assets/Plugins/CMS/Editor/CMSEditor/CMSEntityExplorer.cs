@@ -6,8 +6,12 @@ using src.Editor.CMSEditor;
 using src.Editor.CMSEditor.Templates;
 using src.Editor.CMSEditor.Utils;
 using UnityEditor;
-using UnityEditor.IMGUI.Controls;
 using UnityEngine;
+#if UNITY_6000_2_OR_NEWER
+using TreeViewState = UnityEditor.IMGUI.Controls.TreeViewState<int>;
+#else
+using TreeViewState = UnityEditor.IMGUI.Controls.TreeViewState;
+#endif
 
 namespace CMS.Editor
 {

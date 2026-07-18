@@ -7,7 +7,7 @@ namespace CMS.Editor
     {
         public override void Action(int instanceId, string pathName, string resourceFile)
         {
-            AssetDatabase.RenameAsset(AssetDatabase.GetAssetPath(instanceId), Path.GetFileNameWithoutExtension(pathName));
+            AssetDatabase.RenameAsset(pathName, Path.GetFileNameWithoutExtension(pathName));
             AssetDatabase.Refresh();
         }
     }

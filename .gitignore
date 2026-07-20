@@ -182,3 +182,7 @@ Assets/_Project/Docs/**
 Tools/UnityMcpServer/node_modules/
 Tools/UnityMcpServer/*.log
 Tools/UnityMcpServer/.unity-mcp-server.pid
+
+!/Packages/
+!/Packages/manifest.json
+!/Packages/packages-lock.json

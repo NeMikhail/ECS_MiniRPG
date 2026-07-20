@@ -231,6 +231,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1809102801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &101589046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101589047}
+  - component: {fileID: 101589048}
+  m_Layer: 0
+  m_Name: Spawner 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &101589047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101589046}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.83, y: 0, z: -15.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 418964591}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &101589048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101589046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9adbced3b65caff4b8710a677aba89cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.MobModule.Views.MobSpawnerView
+  _spawnBehaviour: {fileID: 11400000, guid: 5a101111111111111111111111111111, type: 2}
 --- !u!1 &161945721
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +413,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
   flattenFolder: 0
   moveChildrenToHierarchyRoot: 0
@@ -379,7 +424,7 @@ MonoBehaviour:
   OnFolderDestroy:
     m_PersistentCalls:
       m_Calls: []
-  notes:
+  notes: 
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,8 +528,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
@@ -811,8 +856,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_CustomShadowLayers: 0
@@ -942,6 +987,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1809102801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &418964590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418964591}
+  m_Layer: 0
+  m_Name: MobSpawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418964591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418964590}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2145995194}
+  - {fileID: 101589047}
+  m_Father: {fileID: 1348150097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &422594008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1018,7 +1096,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1001 &536332207
 PrefabInstance:
@@ -1531,14 +1609,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22e44f469e5d8364fac3fa205f75c4a7, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.LocationView
   serializationData:
     SerializedFormat: 2
-    SerializedBytes:
+    SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 161945722}
-    SerializedBytesString:
+    SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
@@ -1551,30 +1629,30 @@ MonoBehaviour:
       Entry: 7
       Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
         mscorlib]], mscorlib
-    - Name:
+    - Name: 
       Entry: 8
-      Data:
-    - Name:
+      Data: 
+    - Name: 
       Entry: 12
       Data: 1
-    - Name:
+    - Name: 
       Entry: 7
-      Data:
+      Data: 
     - Name: $k
       Entry: 1
       Data: PlayerStart
     - Name: $v
       Entry: 10
       Data: 0
-    - Name:
+    - Name: 
       Entry: 8
-      Data:
-    - Name:
+      Data: 
+    - Name: 
       Entry: 13
-      Data:
-    - Name:
+      Data: 
+    - Name: 
       Entry: 8
-      Data:
+      Data: 
   _resourceNodesSpawn: {fileID: 1260376516}
   _resourceSpawnPoints: []
 --- !u!4 &815382071
@@ -1619,8 +1697,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_IsGlobal: 1
   priority: 0
   blendDistance: 0
@@ -1887,7 +1965,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1001 &936941307
 PrefabInstance:
@@ -1960,7 +2038,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1001 &947451616
 PrefabInstance:
@@ -2033,7 +2111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1001 &967054014
 PrefabInstance:
@@ -2106,7 +2184,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!114 &982753679 stripped
 MonoBehaviour:
@@ -2117,7 +2195,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1001 &1018460149
 PrefabInstance:
@@ -2190,7 +2268,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1 &1019369759
 GameObject:
@@ -2219,7 +2297,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
   flattenFolder: 0
   moveChildrenToHierarchyRoot: 0
@@ -2230,7 +2308,7 @@ MonoBehaviour:
   OnFolderDestroy:
     m_PersistentCalls:
       m_Calls: []
-  notes:
+  notes: 
 --- !u!4 &1019369761
 Transform:
   m_ObjectHideFlags: 0
@@ -2444,7 +2522,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1001 &1114846588
 PrefabInstance:
@@ -2517,7 +2595,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1001 &1131136450
 PrefabInstance:
@@ -2529,7 +2607,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 18334122628796073, guid: 66b7f272c5ec349bf92a241d13d7d567, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
-      value:
+      value: 
       objectReference: {fileID: 2100000, guid: 34d5d83009c3e484f8fc28bc2b391f0b, type: 2}
     - target: {fileID: 1155751738780759494, guid: 66b7f272c5ec349bf92a241d13d7d567, type: 3}
       propertyPath: m_LocalScale.x
@@ -2681,7 +2759,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
   flattenFolder: 0
   moveChildrenToHierarchyRoot: 0
@@ -2692,7 +2770,7 @@ MonoBehaviour:
   OnFolderDestroy:
     m_PersistentCalls:
       m_Calls: []
-  notes:
+  notes: 
 --- !u!4 &1196752744
 Transform:
   m_ObjectHideFlags: 0
@@ -2719,7 +2797,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1 &1216693775
 GameObject:
@@ -2825,7 +2903,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1 &1260376514
 GameObject:
@@ -2894,7 +2972,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12643a6c28e2d8e4d897c94a3dc8927c, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.ResourceNodesSpawnView
   _resourceSpawnPoints:
   - {fileID: 1403589597}
@@ -2931,7 +3009,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e3324a83b3353f4e869f9cf033055d1, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.GUIModule.GUIView
 --- !u!114 &1269910856 stripped
 MonoBehaviour:
@@ -2942,7 +3020,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1 &1348150096
 GameObject:
@@ -2976,6 +3054,7 @@ Transform:
   m_Children:
   - {fileID: 161945722}
   - {fileID: 1260376515}
+  - {fileID: 418964591}
   m_Father: {fileID: 2123976671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1348150098
@@ -2988,7 +3067,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
   flattenFolder: 0
   moveChildrenToHierarchyRoot: 0
@@ -2999,7 +3078,7 @@ MonoBehaviour:
   OnFolderDestroy:
     m_PersistentCalls:
       m_Calls: []
-  notes:
+  notes: 
 --- !u!1001 &1364242796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3071,7 +3150,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!114 &1403589597 stripped
 MonoBehaviour:
@@ -3082,7 +3161,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!114 &1473280902 stripped
 MonoBehaviour:
@@ -3093,7 +3172,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1 &1488412627
 GameObject:
@@ -3216,7 +3295,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!114 &1579022078 stripped
 MonoBehaviour:
@@ -3227,7 +3306,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!114 &1582709640 stripped
 MonoBehaviour:
@@ -3238,7 +3317,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1001 &1718302784
 PrefabInstance:
@@ -3311,7 +3390,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!114 &1737609656 stripped
 MonoBehaviour:
@@ -3322,7 +3401,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!114 &1781287418 stripped
 MonoBehaviour:
@@ -3333,7 +3412,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1 &1809102800
 GameObject:
@@ -3382,7 +3461,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
   flattenFolder: 0
   moveChildrenToHierarchyRoot: 0
@@ -3393,7 +3472,7 @@ MonoBehaviour:
   OnFolderDestroy:
     m_PersistentCalls:
       m_Calls: []
-  notes:
+  notes: 
 --- !u!114 &1819271626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 665532840038237981, guid: 1ee62bb98a8a1c34a9695706902edbbf, type: 3}
@@ -3403,7 +3482,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!4 &1842202594 stripped
 Transform:
@@ -3531,7 +3610,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1 &2011711755
 GameObject:
@@ -3654,8 +3733,72 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
+--- !u!1 &2063494832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063494834}
+  - component: {fileID: 2063494833}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2063494833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063494832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: ae9f88bad3bbf994c98347434ad32a77, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &2063494834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063494832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.83001, y: -0, z: -15.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2065894839 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4938873347970466141, guid: 57a0e82bd11882a4685829e875bc2624, type: 3}
@@ -3665,7 +3808,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729d9808cd0910f438d1ae65273a060d, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LocationModule.Resources.Views.LocationResourceSpawnPointView
 --- !u!1 &2123976670
 GameObject:
@@ -3712,7 +3855,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1816795d2838f643acc6f6f815cfff9, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierarchyDesigner.HierarchyDesignerFolder
   flattenFolder: 0
   moveChildrenToHierarchyRoot: 0
@@ -3723,7 +3866,52 @@ MonoBehaviour:
   OnFolderDestroy:
     m_PersistentCalls:
       m_Calls: []
-  notes:
+  notes: 
+--- !u!1 &2145995193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145995194}
+  - component: {fileID: 2145995195}
+  m_Layer: 0
+  m_Name: Spawner 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145995194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145995193}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.11, y: 0, z: 18.46}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 418964591}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2145995195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145995193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9adbced3b65caff4b8710a677aba89cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.MobModule.Views.MobSpawnerView
+  _spawnBehaviour: {fileID: 11400000, guid: 4a101111111111111111111111111111, type: 2}
 --- !u!1001 &2274356154389790682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3793,21 +3981,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LOGIC_Game
       objectReference: {fileID: 0}
-    - target: {fileID: 6404111839921028883, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
-      propertyPath: autoInjectGameObjects.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404111839921028883, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
-      propertyPath: _moduleInstallerConfigs.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404111839921028883, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
-      propertyPath: _moduleInstallerConfigs.Array.data[8]._isEnabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: serializationData.Prefab
-      value:
+      value: 
       objectReference: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
@@ -3827,11 +4003,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: 'serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]'
-      value:
+      value: 
       objectReference: {fileID: 815382070}
     - target: {fileID: 6635643808000808149, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: 'serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]'
-      value:
+      value: 
       objectReference: {fileID: 1268819746}
     - target: {fileID: 7337933654193200503, guid: 885d9e1b05f48f8429b71d8feb152157, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3944,3 +4120,4 @@ SceneRoots:
   - {fileID: 2123976671}
   - {fileID: 4039427004195036270}
   - {fileID: 2274356154389790682}
+  - {fileID: 2063494834}

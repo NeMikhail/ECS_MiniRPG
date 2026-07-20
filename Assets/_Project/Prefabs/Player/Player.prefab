@@ -544,10 +544,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.GUIModule.Views.HealthBarView
   _document: {fileID: 3955154194040046987}
   _billboard: {fileID: 275325832290527705}
-  _width: 100
-  _height: 12
-  _fillColor: {r: 0.75, g: 0.08, b: 0.08, a: 1}
-  _backgroundColor: {r: 0.08, g: 0.08, b: 0.08, a: 0.75}
+  _fillDepthOffset: -0.01
+  _backgroundSortingOrder: 20
+  _fillSortingOrder: 21
+  _fillColor: {r: 0.07701701, g: 0.5377358, b: 0.058339275, a: 1}
+  _backgroundColor: {r: 0, g: 0, b: 0, a: 0.75}
 --- !u!114 &275325832290527705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,8 +580,10 @@ MonoBehaviour:
   m_SortingOrder: 0
   m_Position: 0
   m_WorldSpaceSizeMode: 1
-  m_WorldSpaceWidth: 1920
-  m_WorldSpaceHeight: 1080
+  m_WorldSpaceWidth: 128
+  m_WorldSpaceHeight: 12.8
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+
+

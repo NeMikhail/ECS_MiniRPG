@@ -13,8 +13,4 @@ MonoBehaviour:
   m_Name: LoggerModuleConfig
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.LoggerModule.Configs.LoggerModuleConfig
   _globalLevel: 2
-  _moduleRules:
-  - _moduleType: 8
-    _level: 3
-  - _moduleType: 10
-    _level: 3
+  _moduleRules: []

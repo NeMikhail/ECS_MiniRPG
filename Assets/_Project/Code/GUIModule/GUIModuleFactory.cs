@@ -40,8 +40,9 @@ namespace ECSMiniRPG.GUIModule
             if (_guiController != null)
             {
                 GameSystems.Add(new GUISystem(), _guiSystemOrder);
-                GameSystems.Add(new HealthBarBindingSystem(), _healthBarBindingSystemOrder);
             }
+
+            GameSystems.Add(new HealthBarBindingSystem(), _healthBarBindingSystemOrder);
         }
 
         public void RegisterFixedSystems()

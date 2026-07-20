@@ -1,6 +1,8 @@
+using ECSMiniRPG.Core;
 using ECSMiniRPG.GameplayModule.Components;
 using ECSMiniRPG.GameplayModule.Events;
 using ECSMiniRPG.GameplayModule.Runtime;
+using ECSMiniRPG.LoggerModule;
 using FFS.Libraries.StaticEcs;
 using UnityEngine;
 
@@ -34,7 +36,7 @@ namespace ECSMiniRPG.GameplayModule.Systems
 
             if (!target.Has<Health>())
             {
-                Debug.LogError("Health command target has no Health component.");
+                LoggerSystem.Error(EcsModuleType.Gameplay, $"Health command target has no Health component. target={target} type={command._type} value={command._value}");
                 return;
             }
 
@@ -83,6 +85,7 @@ namespace ECSMiniRPG.GameplayModule.Systems
                 HealthOperations.Kill(ref health);
             }
 
+            LoggerSystem.Debug(EcsModuleType.Gameplay, $"Health command processed. target={target} type={command._type} value={command._value} hp={previousHealth}->{health._currentValue.Value}/{health._maxValue.Value}");
             SendChangeEvents(target, previousHealth, previousMaxHealth, health);
         }
 

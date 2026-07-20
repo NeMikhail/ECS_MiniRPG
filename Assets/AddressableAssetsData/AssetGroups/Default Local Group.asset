@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 3dbad97e1cf20d548924593135f94201
   m_SerializeEntries:
+  - m_GUID: 0f28954f612895447a7e6daa34802d15
+    m_Address: BlueEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 22b31200f11cff542913cac174d78524
     m_Address: ArmorLootObject
     m_ReadOnly: 0
@@ -35,6 +40,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60e362b55f266d94688b101be99e95f6
+    m_Address: BrownEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6495b64ee986d074f96e31c8fc693c4f
     m_Address: ResourceNode_StoneT1
     m_ReadOnly: 0
@@ -50,6 +60,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a469fa9ddbe048c4eb46ad9391d74249
+    m_Address: YellowEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ac039423378e32a40b33bb7d2e95c056
     m_Address: TreasureLootObject
     m_ReadOnly: 0
@@ -57,6 +72,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: daddf6130e904904d99c61a35863f52e
     m_Address: ResourceNode_ClothT1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee66bfbbc08ac4447a60ec0a334d4745
+    m_Address: BasicEnemy
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -81,3 +101,4 @@ MonoBehaviour:
     m_Schemas:
     - {fileID: 11400000, guid: 8995936212768a64a9afec69dd4c3e86, type: 2}
     - {fileID: 11400000, guid: f4f8eff75ad492e42baa84555d64f077, type: 2}
+

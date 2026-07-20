@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1263950529348321637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -3677761637017106483, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: 'Guid.RawGuidValue.Array.data[0]'
+      value: -298933285
+      objectReference: {fileID: 0}
+    - target: {fileID: -3677761637017106483, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: 'Guid.RawGuidValue.Array.data[1]'
+      value: -1774363014
+      objectReference: {fileID: 0}
+    - target: {fileID: 264367623931507301, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: SortKey
+      value: 2882224218
+      objectReference: {fileID: 0}
+    - target: {fileID: 264367623931507301, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: 'NetworkedBehaviours.Array.data[0]'
+      value: 
+      objectReference: {fileID: 9212491319869881262}
+    - target: {fileID: 264367623931507301, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: 'NetworkedBehaviours.Array.data[1]'
+      value: 
+      objectReference: {fileID: 195439518783606008}
+    - target: {fileID: 448459235944686524, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eef8ad29f8509ba479766dde1c8704fc, type: 2}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.29764
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.27655
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715019608930561127, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109097498055355841, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: _config
+      value: 
+      objectReference: {fileID: 11400000, guid: 754d40ef8a3cb9244a41b1336c2d3bac, type: 2}
+    - target: {fileID: 5370893818688715534, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+      propertyPath: m_Name
+      value: BlueEnemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+--- !u!114 &195439518783606008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1386021799721094557, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+  m_PrefabInstance: {fileID: 1263950529348321637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkTransform
+--- !u!114 &9212491319869881262 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7949746441605348043, guid: ee66bfbbc08ac4447a60ec0a334d4745, type: 3}
+  m_PrefabInstance: {fileID: 1263950529348321637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43897471756d8043bcf2cbe7025738c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowcaseRPG.Code.MobModule.BasicEnemy

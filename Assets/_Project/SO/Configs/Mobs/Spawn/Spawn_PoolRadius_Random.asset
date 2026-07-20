@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3060fa10f7ca9f14e8e86a381790b4b5, type: 3}
+  m_Name: Spawn_PoolRadius_Random
+  m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.MobModule.Strategies.Spawn_PoolRadiusBehaviourConfig
+  _mobSelectionMode: 2
+  _mobConfig: {fileID: 0}
+  _mobConfigs:
+  - {fileID: 11400000, guid: 754d40ef8a3cb9244a41b1336c2d3bac, type: 2}
+  - {fileID: 11400000, guid: 78864cccec64c4345bd535bc047bcb61, type: 2}
+  - {fileID: 11400000, guid: 4b91260f96366b24893364afbbe67203, type: 2}
+  _maxCount: 5
+  _spawnInterval: 2
+  _radius: 5

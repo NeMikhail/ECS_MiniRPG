@@ -11,7 +11,10 @@ namespace ECSMiniRPG.Core
         GUI = 6,
         Inventory = 7,
         Gameplay = 8,
-        Interaction = 9
+        Interaction = 9,
+        Mob = 10,
+        Logger = 11
     }
 }
+
 

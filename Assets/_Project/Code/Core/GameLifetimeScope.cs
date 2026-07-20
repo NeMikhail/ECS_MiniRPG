@@ -6,7 +6,9 @@ using ECSMiniRPG.InputSystem;
 using ECSMiniRPG.InteractionModule;
 using ECSMiniRPG.InventoryModule;
 using ECSMiniRPG.LocationModule;
+using ECSMiniRPG.LoggerModule;
 using ECSMiniRPG.MainMenuModule;
+using ECSMiniRPG.MobModule;
 using ECSMiniRPG.PlayerModule;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -39,6 +41,8 @@ namespace ECSMiniRPG.Core
             builder.Register<InventoryModuleFactory>(Lifetime.Singleton).AsSelf();
             builder.Register<GameplayModuleFactory>(Lifetime.Singleton).AsSelf();
             builder.Register<InteractionModuleFactory>(Lifetime.Singleton).AsSelf();
+            builder.Register<MobModuleFactory>(Lifetime.Singleton).AsSelf();
+            builder.Register<LoggerModuleFactory>(Lifetime.Singleton).AsSelf();
             builder.Register(c => BuildModuleFactories(c), Lifetime.Singleton);
         }
 
@@ -119,8 +123,19 @@ namespace ECSMiniRPG.Core
                 moduleFactory = resolver.Resolve<InteractionModuleFactory>();
             }
 
+            if (moduleType == EcsModuleType.Mob)
+            {
+                moduleFactory = resolver.Resolve<MobModuleFactory>();
+            }
+
+            if (moduleType == EcsModuleType.Logger)
+            {
+                moduleFactory = resolver.Resolve<LoggerModuleFactory>();
+            }
+
             return moduleFactory;
         }
     }
 }
+
 

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ToolType_ScytheT1
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.InventoryModule.Tooling.ToolTypeConfig
   _id: scythe_t1
+  _includedToolTypes: []

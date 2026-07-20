@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: ToolType_ScytheT2
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.InventoryModule.Tooling.ToolTypeConfig
   _id: scythe_t2
+  _includedToolTypes:
+  - {fileID: 11400000, guid: 05997a258edd4054bb695621e1857e5d, type: 2}

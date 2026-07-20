@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ToolType_AxeT1
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.InventoryModule.Tooling.ToolTypeConfig
   _id: axe_t1
+  _includedToolTypes: []

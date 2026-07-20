@@ -47,26 +47,37 @@ namespace ECSMiniRPG.InventoryModule.Tooling
 
             for (var i = 0; i < state.InventorySlots.Count; i++)
             {
-                AddToolType(toolTypes, state.InventorySlots[i].Item);
+                AddToolTypes(toolTypes, state.InventorySlots[i].Item);
             }
 
             for (var i = 0; i < state.EquipmentSlots.Count; i++)
             {
-                AddToolType(toolTypes, state.EquipmentSlots[i].Item);
+                AddToolTypes(toolTypes, state.EquipmentSlots[i].Item);
             }
 
             return toolTypes;
         }
 
-        private void AddToolType(HashSet<ToolTypeConfig> toolTypes, InventoryItemInstance item)
+        private void AddToolTypes(HashSet<ToolTypeConfig> toolTypes, InventoryItemInstance item)
         {
             if (item != null && item.Preset != null)
             {
                 var toolItem = item.Preset as ToolItemConfig;
 
-                if (toolItem != null && toolItem.ToolType != null)
+                if (toolItem != null)
                 {
-                    toolTypes.Add(toolItem.ToolType);
+                    AddToolType(toolTypes, toolItem.ToolType);
+                }
+            }
+        }
+
+        private void AddToolType(HashSet<ToolTypeConfig> toolTypes, ToolTypeConfig toolType)
+        {
+            if (toolType != null && toolTypes.Add(toolType))
+            {
+                for (var i = 0; i < toolType.IncludedToolTypes.Count; i++)
+                {
+                    AddToolType(toolTypes, toolType.IncludedToolTypes[i]);
                 }
             }
         }

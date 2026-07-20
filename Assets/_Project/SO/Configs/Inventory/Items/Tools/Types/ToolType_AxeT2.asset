@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: ToolType_AxeT2
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.InventoryModule.Tooling.ToolTypeConfig
   _id: axe_t2
+  _includedToolTypes:
+  - {fileID: 11400000, guid: 89746242c12a3f04eb2319d2fdda2dfc, type: 2}

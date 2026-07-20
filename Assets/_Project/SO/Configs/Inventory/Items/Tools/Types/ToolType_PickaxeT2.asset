@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: ToolType_PickaxeT2
   m_EditorClassIdentifier: Assembly-CSharp::ECSMiniRPG.InventoryModule.Tooling.ToolTypeConfig
   _id: pickaxe_t2
+  _includedToolTypes:
+  - {fileID: 11400000, guid: f902f1827b323034397e8d189a9f4de7, type: 2}
